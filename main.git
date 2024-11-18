@@ -45,7 +45,7 @@ resource "aws_security_group" "amazon_clone_sg" {
   vpc_id      = aws_vpc.amazon_clone_vpc.id
 
   ingress = [
-    for port in [22, 80, 443, 8080, 9000] : {
+    for port in [22, 80, 443, 8080, 9000,3000] : {
         from_port        = port
         to_port          = port
         protocol         = "tcp"
